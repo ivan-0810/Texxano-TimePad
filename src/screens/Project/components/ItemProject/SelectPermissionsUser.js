@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import DropDownPicker from 'react-native-dropdown-picker';
 import { createPermissions, updatePermissions, deleteByIdPermissions } from '../../../../redux/actions/Permissions/permissions.actions'
 import { useSelector, useDispatch } from "react-redux";
-import { useIntl, injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 
 const SelectPermissionsUser = ({ select, userId, projectId, idPermissions, length, disableUpdateOwner, parentId }) => {
     const dispatch = useDispatch();
@@ -79,4 +79,4 @@ const SelectPermissionsUser = ({ select, userId, projectId, idPermissions, lengt
     )
 }
 
-export default injectIntl(SelectPermissionsUser)
+export default SelectPermissionsUser

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useIntl, injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import DropDownPicker from "react-native-dropdown-picker";
 
 const LanguageSelectProfile = ({ onSelected, selected, disable }) => {
@@ -63,4 +63,4 @@ const LanguageSelectProfile = ({ onSelected, selected, disable }) => {
     )
 }
 
-export default injectIntl(LanguageSelectProfile)
+export default LanguageSelectProfile

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useIntl, injectIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import DropDownPicker from "react-native-dropdown-picker";
 
 import http from "../services/http";
@@ -92,4 +92,4 @@ const SelectDropDown = ({ onSelected, selected, type, zIndex, disable }) => {
   );
 };
 
-export default injectIntl(SelectDropDown);
+export default SelectDropDown;

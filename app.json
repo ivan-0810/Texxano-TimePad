@@ -13,7 +13,7 @@
     },
     "updates": {
       "enabled": true,
-      "url": "https://u.expo.dev/2020fb3f-8a83-4c22-8e09-c583d37142dd",
+      "url": "https://u.expo.dev/ce467646-37bb-438e-adb6-94492f953808",
       "fallbackToCacheTimeout": 0,
       "checkAutomatically": "ON_LOAD"
     },
@@ -24,8 +24,8 @@
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Location permission is needed in order to track and log device location!",
         "NSLocationAlwaysUsageDescription": "Location permission is required for background location tracking.",
-         "NSCameraUsageDescription": "We need access to your camera to take photos.",
-         "NSLocationAlwaysAndWhenInUseUsageDescription": "We need your location even in the background to track your position continuously.",
+        "NSCameraUsageDescription": "We need access to your camera to take photos.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "We need your location even in the background to track your position continuously.",
         "UIBackgroundModes": [
           "location",
           "remote-notification",
@@ -57,7 +57,9 @@
         "android.permission.INTERNET",
         "android.permission.VIBRATE",
         "android.permission.RECEIVE_BOOT_COMPLETED",
-        "android.permission.WAKE_LOCK"
+        "android.permission.WAKE_LOCK",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
       ],
       "config": {
         "googleMaps": {
@@ -82,7 +84,9 @@
         {
           "icon": "./assets/icon.png",
           "color": "#ffffff",
-          "sounds": ["./assets/notification.mp3"]
+          "sounds": [
+            "./assets/notification.mp3"
+          ]
         }
       ],
       [
@@ -116,7 +120,7 @@
     "userInterfaceStyle": "automatic",
     "extra": {
       "eas": {
-        "projectId": "2020fb3f-8a83-4c22-8e09-c583d37142dd"
+        "projectId": "ce467646-37bb-438e-adb6-94492f953808"
       }
     }
   }

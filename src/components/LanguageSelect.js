@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { translation } from '../redux/actions/Translations/translation.action'
 import { Select, CheckIcon } from "native-base"
-import { useIntl, injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import { updateLanguage } from "../redux/actions/UsersTeams/user.actions"
 const LanguageSelect = () => {
     const dispatch = useDispatch();
@@ -59,4 +59,4 @@ const LanguageSelect = () => {
     )
 }
 
-export default injectIntl(LanguageSelect)
+export default LanguageSelect

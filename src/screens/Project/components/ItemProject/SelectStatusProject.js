@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DropDownPicker from 'react-native-dropdown-picker';
-import { useIntl, injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 const SelectStatusProject = ({ onSelect, select, openDropDown }) => {
     const intl = useIntl();
     const [statusProject, setStatusProject] = useState(select);
@@ -46,4 +46,4 @@ const SelectStatusProject = ({ onSelect, select, openDropDown }) => {
     )
 }
 
-export default injectIntl(SelectStatusProject)
+export default SelectStatusProject

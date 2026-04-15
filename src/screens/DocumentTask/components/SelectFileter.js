@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useIntl, injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import DropDownPicker from "react-native-dropdown-picker";
 
 const SelectFileter = ({ filterCode, setFilterCode }) => {
@@ -53,4 +53,4 @@ const SelectFileter = ({ filterCode, setFilterCode }) => {
     )
 }
 
-export default injectIntl(SelectFileter)
+export default SelectFileter

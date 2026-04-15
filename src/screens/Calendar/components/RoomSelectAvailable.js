@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useIntl, injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import DropDownPicker from "react-native-dropdown-picker";
 
 import http from "../../../services/http";
@@ -63,4 +63,4 @@ const RoomSelectAvailable = ({ reserveRoom, room, setRoom, start, end }) => {
     )
 }
 
-export default injectIntl(RoomSelectAvailable)
+export default RoomSelectAvailable
