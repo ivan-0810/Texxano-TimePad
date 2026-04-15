@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
-
 import {
   Image,
   ActivityIndicator,
@@ -11,23 +9,16 @@ import {
   TouchableOpacity,
   Platform,
   Keyboard,
-  Linking,
-  Modal,
   View,
-  FlatList,
-  Switch,
 } from "react-native";
 import { Text, Input, Icon, Box, Button, Checkbox } from "native-base";
 import { Feather, Entypo } from "@expo/vector-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage } from "react-intl";
-
 import { NavigationService } from "../../navigator";
 import { login } from "../../redux/actions/Authentication/userAuth.actions";
 import { validatePassword, validateEmail } from "../../utils/validate";
 import { styles } from "../../asset/style/Authentications.styles";
-import LoginGoogle from "./LoginGoogle";
-import Constants from "expo-constants";
 import AppContainerClean from "../../components/AppContainerClean";
 
 const Login = () => {
@@ -83,11 +74,7 @@ const Login = () => {
       Keyboard.dismiss();
     }
   };
-  useEffect(() => {
-    registerForPushNotificationsAsync().then((tokenExpo) =>
-      setExpoPushToken(tokenExpo)
-    );
-  }, []);
+
 
   const navigateForgotPassword = () => {
     setSubmitted(false);
@@ -275,46 +262,46 @@ const Login = () => {
 
 export default Login;
 
-async function registerForPushNotificationsAsync() {
-  let tokenExpo;
-  if (Platform.OS === "android") {
-    Notifications.setNotificationChannelAsync("default", {
-      name: "default",
-      importance: Notifications.AndroidImportance.MAX,
-      vibrationPattern: [0, 250, 250, 250],
-      lightColor: "#FF231F7C",
-    });
-  }
+// async function registerForPushNotificationsAsync() {
+//   let tokenExpo;
+//   if (Platform.OS === "android") {
+//     Notifications.setNotificationChannelAsync("default", {
+//       name: "default",
+//       importance: Notifications.AndroidImportance.MAX,
+//       vibrationPattern: [0, 250, 250, 250],
+//       lightColor: "#FF231F7C",
+//     });
+//   }
 
-  if (Device.isDevice) {
-    const { status: existingStatus } =
-      await Notifications.getPermissionsAsync();
+//   if (Device.isDevice) {
+//     const { status: existingStatus } =
+//       await Notifications.getPermissionsAsync();
 
-    let finalStatus = existingStatus;
-    if (existingStatus !== "granted") {
-      const { status } = await Notifications.requestPermissionsAsync();
-      finalStatus = status;
-    }
-    if (finalStatus !== "granted") {
-      alert("Failed to get push token for push notification!");
-      return;
-    }
+//     let finalStatus = existingStatus;
+//     if (existingStatus !== "granted") {
+//       const { status } = await Notifications.requestPermissionsAsync();
+//       finalStatus = status;
+//     }
+//     if (finalStatus !== "granted") {
+//       alert("Failed to get push token for push notification!");
+//       return;
+//     }
 
-    try {
-      const projectId =
-        Constants?.expoConfig?.extra?.eas?.projectId ??
-        Constants?.easConfig?.projectId;
-      if (!projectId) {
-        throw new Error("Project ID not found");
-      }
-      tokenExpo = (await Notifications.getExpoPushTokenAsync({ projectId }))
-        .data;
-    } catch (error) {
-      console.log(error, "error");
-    }
-  } else {
-    alert("Must use physical device for Push Notifications");
-  }
+//     try {
+//       const projectId =
+//         Constants?.expoConfig?.extra?.eas?.projectId ??
+//         Constants?.easConfig?.projectId;
+//       if (!projectId) {
+//         throw new Error("Project ID not found");
+//       }
+//       tokenExpo = (await Notifications.getExpoPushTokenAsync({ projectId }))
+//         .data;
+//     } catch (error) {
+//       console.log(error, "error");
+//     }
+//   } else {
+//     alert("Must use physical device for Push Notifications");
+//   }
 
-  return tokenExpo;
-}
+//   return tokenExpo;
+// }

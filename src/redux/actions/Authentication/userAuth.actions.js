@@ -19,7 +19,7 @@ export function login(payload, payloadMobile, remember) {
       } else {
         let tokenExpirationEpoch = new Date(data.tokenExpiration).getTime();
         let dataSuccess = { ...data, tokenExpirationEpoch };
-console.log(data,'data od login')
+
         await Promise.all([
           dispatch(successData(data)),
           dispatch(translation(data.language)),

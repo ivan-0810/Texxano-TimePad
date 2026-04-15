@@ -4,40 +4,16 @@ import { createStackNavigator } from "react-navigation-stack";
 import { useSelector } from "react-redux";
 import UserStatusManager from "../services/Chat/userStatusManager";
 import Dashboard from "../screens/Dashboard/Dashboard";
-import Project from "../screens/Project/Project";
-import Documents from "../screens/Project/Documents";
-import Comments from "../screens/Project/Comments";
-import TaskProject from "../screens/Project/TaskProject";
-import MoneyProject from "../screens/Project/MoneyProject";
+
 import Users from "../screens/UsersTeams/TeamsContainer";
 import UsersPermissions from "../screens/Project/UsersPermissions";
-import Activity from "../screens/Project/Activity";
-import ReportProject from "../screens/Project/ReportProject";
+
 import Profile from "../screens/Profile/Profile";
 import Password from "../screens/Profile/Password";
-import Notifications from "../screens/Notifications/Notifications";
+
 import NotificationsSettings from "../screens/Profile/NotificationsSettings";
 import Devices from "../screens/Profile/Devices";
-import Overview from "../screens/MoreInfo/Overview";
-import Presentation from "../screens/MoreInfo/Presentation";
-import Privacy from "../screens/MoreInfo/Privacy";
-import FavoriteProject from "../screens/FavoriteProject/FavoriteProject";
-import Report from "../screens/Report/Report";
-import GlobalSearch from "../screens/GlobalSearch/GlobalSearch";
-import SettingsAdmin from "../screens/SettingsAdmin/BackgroundJobs";
-import Calendar from "../screens/Calendar/CalendarContainer";
-import DueDate from "../screens/DueDate/DueDate";
-import Vacation from "../screens/Vacation/VacationContainer";
-import Task from "../screens/Task/TaskContainer.js";
-import TimeTracks from "../screens/TimeTracks/TimeHeaderNavigate/TimeTracks";
-import TimeTracksCharge from "../screens/TimeTracks/TimeHeaderNavigate/TimeTracksCharge";
-import Time from "../screens/TimeTracks/TimeContainer";
-import MoneyTracker from "../screens/MoneyTracker/MoneyTrackerContainer";
-import OpenAi from "../screens/OpenAi/OpenAiContainer";
-import Gps from "../screens/GPSTracks/GPSTrackerContainer";
-import DocumentTask from "../screens/DocumentTask/DocumentTaskContainer";
-import ChatMessages from "../screens/Chat/ChatMessages/ChatMessages";
-import ChatRoomList from "../screens/Chat/ChatRoomList/ChatRoomList";
+
 import TimeWizard from "../screens/TimeWizard/TimeWizard";
 import TimeTrackingDashboard from "../screens/TimeWizard/TimeTrackingDashboard";
 
@@ -54,36 +30,9 @@ const NavigatorPrivate = createStackNavigator(
     Devices,
     TimeWizard,
     TimeTrackingDashboard,
-    // Project,
-    // Documents,
-    // Comments,
-    // TaskProject,
-    // MoneyProject,
     Users,
     UsersPermissions,
-    // Activity,
-    // ReportProject,
-    // Notifications,
-    // Overview,
-    // Presentation,
-    // Privacy,
-    // FavoriteProject,
-    // TimeTracks,
-    // TimeTracksCharge,
-    // Report: Report,
-    // GlobalSearch,
-    // SettingsAdmin,
-    // Calendar,
-    // DueDate,
-    // Vacation,
-    // Time,
-    // Task,
-    // MoneyTracker,
-    // OpenAi,
-    // Gps,
-    // DocumentTask,
-    // ChatMessages,
-    // ChatRoomList: ChatRoomList,
+
   },
   {
     defaultNavigationOptions: {

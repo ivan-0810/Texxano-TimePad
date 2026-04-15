@@ -1,7 +1,6 @@
 import React from "react";
 import { NavigationService } from "../../../navigator";
 import { useSelector } from "react-redux";
-
 import {
   StyleSheet,
   TouchableOpacity,
@@ -9,11 +8,11 @@ import {
   View,
 } from "react-native";
 import { FormattedMessage } from "react-intl";
-import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+
 
 const HeaderProfile = ({ location }) => {
   const state = useSelector((state) => state);
-  const isAdministrator = state.userDataRole?.isAdministrator;
+
   return (
     <>
       <View style={styles.container}>
@@ -40,36 +39,7 @@ const HeaderProfile = ({ location }) => {
               <FormattedMessage id="login.form.password.placeholder" />
             </Text>
           </TouchableOpacity>
-          {!isAdministrator ? (
-            <>
-              <TouchableOpacity
-                style={location === "Settings" ? styles.test : styles.test2}
-                onPress={() => {
-                  NavigationService.navigate("NotificationsSettings", {});
-                }}
-              >
-                <Text
-                  style={location === "Settings" ? styles.title : styles.title2}
-                >
-                  <FormattedMessage id="Notifications" />
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={location === "Devices" ? styles.test : styles.test2}
-                onPress={() => {
-                  NavigationService.navigate("Devices", {});
-                }}
-              >
-                <Text
-                  style={location === "Devices" ? styles.title : styles.title2}
-                >
-                  <FormattedMessage id="Devices" />
-                </Text>
-              </TouchableOpacity>
-            </>
-          ) : (
-            <></>
-          )}
+     
         </View>
       </View>
 

@@ -212,19 +212,7 @@ const Profile = () => {
                 )}
               </FormattedMessage>
             </Box>
-            <Box style={[profileStyle.boxNotifications, { marginRight: 20 }]}>
-              <Text style={profileStyle.textNotifications}>
-                <FormattedMessage id="Enable.Tracking" />
-              </Text>
-              <Switch
-                trackColor={{ false: "#7d7d7d", true: "#429cfc" }}
-                thumbColor={enableTracking ? "#007bff" : "#f4f3f4"}
-                ios_backgroundColor="#7d7d7d"
-                onValueChange={() => setEnableTracking(!enableTracking)}
-                value={enableTracking}
-                disabled={changeProfile}
-              />
-            </Box>
+
             <Box style={profileStyle.box}>
               <Text style={profileStyle.text}>
                 <FormattedMessage id="projects.form.users.language.placeholder" />
